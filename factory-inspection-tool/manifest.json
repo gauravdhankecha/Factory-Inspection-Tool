@@ -1,0 +1,21 @@
+{
+  "name": "ફેક્ટરી ઇન્સ્પેક્શન ટૂલ",
+  "short_name": "ઇન્સ્પેક્શન ટૂલ",
+  "description": "ઔદ્યોગિક સલામતી અને સ્વાસ્થ્ય કચેરી, નવસારી - ફેક્ટરી ઇન્સ્પેક્શન અને રોજનીશી મેનેજમેન્ટ ટૂલ",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#2f6f4f",
+  "theme_color": "#2f6f4f",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
