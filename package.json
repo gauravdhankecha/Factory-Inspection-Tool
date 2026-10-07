@@ -1,0 +1,25 @@
+{
+  "name": "inspection-tool",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ફેક્ટરી ઇન્સ્પેક્શન ટૂલ — નવસારી કચેરી (Next.js + Postgres)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "jose": "^6.0.11",
+    "jszip": "^3.10.1",
+    "mongodb": "^7.7.0",
+    "next": "^15.5.4",
+    "postgres": "^3.4.7",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}

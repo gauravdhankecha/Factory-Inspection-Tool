@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.env*.local
+.vercel
+*.log
+# your real inspection data — never put it on GitHub
+data/
+
+.vercel

@@ -1,0 +1,52 @@
+/* Additions on top of legacy/tool.css: sign-in, users page, user menu, toasts. */
+
+.usermenu{ display:flex; align-items:center; gap:10px; font-size:.8rem; color:var(--side-ink); }
+.usermenu .who{ display:flex; flex-direction:column; line-height:1.2; text-align:right; }
+.usermenu .who b{ color:#fff; font-weight:600; font-size:.82rem; }
+.usermenu .who span{ color:var(--side-muted); font-size:.7rem; }
+.usermenu a, .usermenu button{ font:inherit; font-size:.78rem; color:var(--side-ink); background:rgba(255,255,255,.09); border:0; border-radius:999px; padding:5px 12px; cursor:pointer; text-decoration:none; white-space:nowrap; }
+.usermenu a:hover, .usermenu button:hover{ background:rgba(255,255,255,.18); color:#fff; }
+.usermenu form{ margin:0; }
+@media (max-width:899px){ .usermenu .who{ display:none; } }
+
+.readonly-banner{ background:var(--amber-tint); color:var(--amber-ink); font-size:.82rem; text-align:center; padding:6px 12px; border-bottom:1px solid var(--line); }
+body.role-viewer #tabs button[data-tab="new"]{ display:none; }
+
+#appToast{ display:none; position:fixed; left:50%; transform:translateX(-50%); bottom:calc(16px + env(safe-area-inset-bottom,0px)); z-index:9998;
+  max-width:min(560px, calc(100vw - 32px)); background:var(--ink); color:var(--card); padding:10px 16px; border-radius:10px; font-size:.86rem; box-shadow:var(--shadow-pop); }
+#appToast.error{ background:var(--danger); color:#fff; }
+
+.boot{ color:var(--muted); text-align:center; padding:60px 16px; }
+
+/* sign-in / first-run */
+.auth-wrap{ min-height:100vh; display:grid; place-items:center; padding:24px 16px; background:var(--paper); }
+.auth-card{ width:100%; max-width:400px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px 24px; box-shadow:var(--shadow-pop); }
+.auth-head{ display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.auth-head .brandmark{ width:42px; height:42px; }
+.auth-head h1{ font-size:1.15rem; margin:0; line-height:1.3; }
+.auth-head p{ margin:0; font-size:.8rem; color:var(--muted); }
+.auth-card .btn{ width:100%; margin-top:18px; }
+.formmsg{ min-height:1.3em; margin-top:10px; font-size:.85rem; }
+.formmsg.error{ color:var(--danger); }
+.formmsg.ok{ color:var(--green); }
+
+/* users & settings page */
+.admin-main{ max-width:1000px; margin:0 auto; padding:20px 28px 80px; }
+@media (max-width:899px){ .admin-main{ padding:14px 12px 80px; } }
+.admin-main h2{ font-size:1.05rem; margin:0 0 10px; }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:0 12px; }
+@media (max-width:640px){ .grid2{ grid-template-columns:1fr; } }
+.userrow{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; padding:10px 0; border-bottom:1px solid var(--line); }
+.userrow:last-child{ border-bottom:0; }
+.userrow .uname{ flex:1 1 200px; min-width:0; }
+.userrow .uname b{ display:block; }
+.userrow .uname span{ font-size:.78rem; color:var(--muted); }
+.userrow select{ width:auto; min-height:34px; padding:4px 32px 4px 10px; font-size:.85rem; }
+.tablewrap{ overflow-x:auto; }
+
+/* tool.css styles text/date inputs; give password boxes the same look */
+input[type=password]{ width:100%; min-height:42px; padding:9px 12px; border:1px solid var(--line-strong); border-radius:8px; background:var(--field); color:var(--ink); font:inherit; font-size:.95rem; }
+input[type=password]:focus{ border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-ring); outline:none; }
+
+/* clerk and sir cannot delete — hide the delete buttons (the server refuses it anyway) */
+body.no-delete .del-ins-btn, body.no-delete .del-draft-btn, body.no-delete .del-diary-btn{ display:none !important; }
