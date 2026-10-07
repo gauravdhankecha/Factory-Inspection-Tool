@@ -33,7 +33,7 @@ export default function AuthForm({ mode }) {
     <div className="auth-wrap">
       <form className="auth-card" onSubmit={onSubmit}>
         <Brand
-          title="ફેક્ટરી ઇન્સ્પેક્શન"
+          title="Welcome to DISH"
           sub={setup ? 'પહેલી વાર સેટઅપ — અધિકારી (એડમિન) ખાતું બનાવો' : 'નવસારી કચેરી — લૉગિન કરો'}
         />
         {setup && (
