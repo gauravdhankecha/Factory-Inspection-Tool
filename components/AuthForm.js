@@ -42,9 +42,9 @@ export default function AuthForm({ mode }) {
             <input type="text" id="name" name="name" required defaultValue="શ્રી જી. એલ. ઢાંકેચા" />
           </>
         )}
-        <label htmlFor="username">યુઝરનેમ (અંગ્રેજીમાં)</label>
+        <label htmlFor="username">Username</label>
         <input type="text" id="username" name="username" required autoComplete="username" autoCapitalize="none" spellCheck="false" />
-        <label htmlFor="password">પાસવર્ડ</label>
+        <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" required autoComplete={setup ? 'new-password' : 'current-password'} minLength={setup ? 8 : undefined} />
         {setup && (
           <>
